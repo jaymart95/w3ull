@@ -50,7 +50,7 @@ def walk_modules(
 class Playa3ull(AutoShardedInteractionBot):
     def __init__(self):
 
-        super().__init__(owner_id=485183782328991745, intents=intents, activity=disnake.Activity(type=disnake.ActivityType.watching, name="https://playa3ull.games"))
+        super().__init__(owner_id=485183782328991745, intents=intents, activity=disnake.Activity(type=disnake.ActivityType.watching, name="w3ull"))
 
     def _load_extensions(
         self,
