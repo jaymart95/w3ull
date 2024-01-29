@@ -1,3 +1,4 @@
+import logging
 import aiohttp
 from disnake.ext import plugins, tasks
 
@@ -16,7 +17,6 @@ URL = "https://api.dexscreener.com/latest/dex/tokens/0xa77e70d0af1ac7ff86726740d
 @plugin.register_loop(wait_until_ready=True)
 @tasks.loop(minutes=2)
 async def price_update():
-    logging.info("updating price")
     async with aiohttp.request("GET", URL, headers=headers) as r:
         data = await r.json()
         price = data["pairs"][0]["priceUsd"]
