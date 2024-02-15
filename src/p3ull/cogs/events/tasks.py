@@ -10,7 +10,7 @@ headers = {
     "User-Agent": "Magic Browser"
 }
 
-URL = "https://api.dexscreener.com/latest/dex/tokens/0xa77e70d0af1ac7ff86726740db1bd065c3566937"
+URL = "https://app.playa3ull.games/api/coin/price"
 
 
 
