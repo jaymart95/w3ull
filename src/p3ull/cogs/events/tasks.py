@@ -15,13 +15,13 @@ URL = "https://app.playa3ull.games/api/coin/price"
 
 
 @plugin.register_loop(wait_until_ready=True)
-@tasks.loop(minutes=2)
+@tasks.loop(seconds=3)
 async def price_update():
     async with aiohttp.request("GET", URL, headers=headers) as r:
         data = await r.json()
-        price = data["pairs"][0]["priceUsd"]
+        logging.info(data)
         guild = plugin.bot.get_guild(928522309596237835)
-        await guild.me.edit(nick=f"${price} USD")
+        await guild.me.edit(nick=f"${data} USD")
 
         
 
