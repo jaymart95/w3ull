@@ -1,4 +1,4 @@
 asyncpg
-disnake==2.7.0
+disnake==2.9.0
 disnake-ext-plugins @ git+https://github.com/Chromosomologist/disnake-ext-plugins@d8c2f21e4abc44ad8e7bce3eca7f7b9a2a85ef05
 python-dotenv==0.19.2
