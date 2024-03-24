@@ -16,9 +16,11 @@ async def price_update():
         data = float(data)
         data = round(float(data), 6)
         logging.info(data)
-        guild = plugin.bot.get_guild(928522309596237835)
-        await guild.me.edit(nick=f"${data} USD")
-
+        for guild in plugin.bot.guilds:
+            try:
+                await guild.me.edit(nick=f"${data} USD")
+            except Exception as e:
+                pass
         
 
 setup, teardown = plugin.create_extension_handlers()
