@@ -19,7 +19,7 @@ async def price_update():
         for guild in plugin.bot.guilds:
             try:
                 await guild.me.edit(nick=f"${data} USD")
-            except Exception as e:
+            except:
                 pass
         
 
